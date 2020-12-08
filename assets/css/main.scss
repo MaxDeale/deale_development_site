@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 $primary-color: purple;
 $secondary-color: #add9ff;
 $pink-color: #dd00a9;
@@ -78,12 +79,13 @@ html {
       margin: 0 30px;
       a {
         font-size: 1.4rem;
-        transition: all 0.3s;
+        transition: all 0.2s;
         color: $secondary-color;
       }
       a:hover {
         color: $pink-color;
-        border-bottom: 2px solid $yellow-color;
+        border-bottom: 3px solid $yellow-color;
+        border-bottom-style: dashed;
       }
     }
   }
@@ -133,7 +135,7 @@ html {
   .sign {
     // background-color: $dark-color;
     z-index: 1;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     border: solid 2px transparent;
     background-clip: padding-box;
     box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
@@ -161,9 +163,20 @@ html {
   }
 }
 
+//header/sign queries
+
 @media (max-width: 1000px) {
-  #header-signs {
+  #header {
     height: 150%;
+  }
+  .sign {
+    width: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+  .sign {
+    width: 100%;
   }
 }
 
@@ -199,12 +212,14 @@ html {
       overflow: hidden;
       h5 {
         font-size: 2rem;
-        transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition: all 0.5s cubic-bezier(0.455, 0.2203, 0.515, 0.955);
         z-index: 52;
       }
 
       h5:hover {
         color: $yellow-color;
+        border-bottom: 3px solid $secondary-color;
+        border-bottom-style: dashed;
       }
     }
 
@@ -233,10 +248,10 @@ html {
     // animation: slideInFromTop 20s ease-in;
 
     width: 90%;
-    height: 30%;
   }
   .port-item:hover {
     background-color: $pink-color;
+    border: 2px solid $yellow-color;
   }
 
   .port-item-1 {
@@ -244,16 +259,43 @@ html {
   }
 }
 
+//portfolio queries
+
+@media (max-width: 600px) {
+  .port-item {
+    margin: 20px 0 !important;
+    width: 100%;
+  }
+  .port-pic {
+    height: 300px !important;
+  }
+}
+
 // SERVICES
 
 #services {
-  background-color: $secondary-color;
+  background-color: $dark-color;
+  color: $secondary-color;
   h2 {
     margin: 4rem auto;
     text-align: center;
     font-size: 3rem;
     width: 600px;
     color: $pink-color;
+  }
+
+  .serv-container {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .serv-item {
+      text-align: center;
+      h5 {
+        font-size: 1.2rem;
+      }
+    }
   }
 }
 

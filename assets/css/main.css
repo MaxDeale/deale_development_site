@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -94,14 +95,15 @@ html {
 
 #navbar ul li a {
   font-size: 1.4rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   color: #add9ff;
 }
 
 #navbar ul li a:hover {
   color: #dd00a9;
-  border-bottom: 2px solid #fdfc01;
+  border-bottom: 3px solid #fdfc01;
+  border-bottom-style: dashed;
 }
 
 @media (max-width: 500px) {
@@ -155,8 +157,8 @@ html {
 
 #header-signs .sign {
   z-index: 1;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   border: solid 2px transparent;
   background-clip: padding-box;
   -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
@@ -198,8 +200,17 @@ html {
 }
 
 @media (max-width: 1000px) {
-  #header-signs {
+  #header {
     height: 150%;
+  }
+  .sign {
+    width: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+  .sign {
+    width: 100%;
   }
 }
 
@@ -250,13 +261,15 @@ html {
 
 #portfolio .port-container .port-item h5 {
   font-size: 2rem;
-  -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-transition: all 0.5s cubic-bezier(0.455, 0.2203, 0.515, 0.955);
+  transition: all 0.5s cubic-bezier(0.455, 0.2203, 0.515, 0.955);
   z-index: 52;
 }
 
 #portfolio .port-container .port-item h5:hover {
   color: #fdfc01;
+  border-bottom: 3px solid #add9ff;
+  border-bottom-style: dashed;
 }
 
 #portfolio .port-container .port-head-1,
@@ -289,19 +302,30 @@ html {
 
 #portfolio .port-pic {
   width: 90%;
-  height: 30%;
 }
 
 #portfolio .port-item:hover {
   background-color: #dd00a9;
+  border: 2px solid #fdfc01;
 }
 
 #portfolio .port-item-1 {
   background-color: #add9ff;
 }
 
+@media (max-width: 600px) {
+  .port-item {
+    margin: 20px 0 !important;
+    width: 100%;
+  }
+  .port-pic {
+    height: 300px !important;
+  }
+}
+
 #services {
-  background-color: #add9ff;
+  background-color: #180910;
+  color: #add9ff;
 }
 
 #services h2 {
@@ -310,6 +334,23 @@ html {
   font-size: 3rem;
   width: 600px;
   color: #dd00a9;
+}
+
+#services .serv-container {
+  width: 80%;
+  margin: 20px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+#services .serv-container .serv-item {
+  text-align: center;
+}
+
+#services .serv-container .serv-item h5 {
+  font-size: 1.2rem;
 }
 
 /* ANIMATIONS */
