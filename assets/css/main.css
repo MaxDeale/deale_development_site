@@ -31,6 +31,7 @@ html {
   height: 1100px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
 }
 
@@ -243,8 +244,8 @@ html {
           backdrop-filter: blur(40px);
   border: solid 2px transparent;
   background-clip: padding-box;
-  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  -webkit-box-shadow: 10px 10px 10px rgba(36, 54, 68, 0.3);
+          box-shadow: 10px 10px 10px rgba(36, 54, 68, 0.3);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -301,7 +302,16 @@ html {
 }
 
 #portfolio .port-pic {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   width: 90%;
+}
+
+#portfolio .port-pic:hover {
+  border-radius: 10%;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  margin: 0 auto !important;
 }
 
 #portfolio .port-item:hover {
@@ -328,6 +338,11 @@ html {
   color: #add9ff;
 }
 
+#services .servhead {
+  color: #add9ff;
+  border-bottom-color: #dd00a9;
+}
+
 #services h2 {
   margin: 4rem auto;
   text-align: center;
@@ -337,7 +352,6 @@ html {
 }
 
 #services .serv-container {
-  width: 80%;
   margin: 20px auto;
   display: -ms-grid;
   display: grid;
@@ -346,11 +360,33 @@ html {
 }
 
 #services .serv-container .serv-item {
+  background-image: url("/assets/img/back1.png");
   text-align: center;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #fdfc01 !important;
+  margin: 1rem;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
 }
 
 #services .serv-container .serv-item h5 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  color: #fdfc01;
 }
 
 /* ANIMATIONS */

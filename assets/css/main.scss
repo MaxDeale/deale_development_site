@@ -39,6 +39,7 @@ html {
   height: 1100px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   .logo-and-slogan {
     display: flex;
@@ -204,7 +205,7 @@ html {
       backdrop-filter: blur(40px);
       border: solid 2px transparent;
       background-clip: padding-box;
-      box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+      box-shadow: 10px 10px 10px rgba(36, 54, 68, 0.3);
       flex-direction: column;
       border: 1px solid $pink-color;
       align-items: center;
@@ -246,8 +247,14 @@ html {
   }
   .port-pic {
     // animation: slideInFromTop 20s ease-in;
-
+    transition: all 1s;
     width: 90%;
+  }
+
+  .port-pic:hover {
+    border-radius: 10%;
+    transform: scale(2);
+    margin: 0 auto !important;
   }
   .port-item:hover {
     background-color: $pink-color;
@@ -276,6 +283,10 @@ html {
 #services {
   background-color: $dark-color;
   color: $secondary-color;
+  .servhead {
+    color: $secondary-color;
+    border-bottom-color: $pink-color;
+  }
   h2 {
     margin: 4rem auto;
     text-align: center;
@@ -285,15 +296,27 @@ html {
   }
 
   .serv-container {
-    width: 80%;
     margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
     .serv-item {
+      background-image: url("/assets/img/back1.png");
       text-align: center;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $yellow-color !important;
+      margin: 1rem;
+      backdrop-filter: blur(40px);
+      border: solid 2px transparent;
+      background-clip: padding-box;
+
       h5 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        color: $yellow-color;
       }
     }
   }
