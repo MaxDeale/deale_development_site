@@ -200,6 +200,7 @@ html {
     .port-item {
       transition: all 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       width: 350px;
+      background-color: $secondary-color;
       border-radius: 2em;
       display: flex;
       backdrop-filter: blur(40px);
@@ -261,9 +262,14 @@ html {
     border: 2px solid $yellow-color;
   }
 
-  .port-item-1 {
-    background-color: $secondary-color;
-  }
+  // .port-item-1,
+  // .port-item-3 {
+  //   background-color: $secondary-color;
+  // }
+  // .port-item-2,
+  // .port-item-4 {
+  //   background-color: ;
+  // }
 }
 
 //portfolio queries
@@ -300,18 +306,30 @@ html {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
+    .serv-item:nth-child(odd) {
+      border-bottom-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    .serv-item:nth-child(even) {
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
     .serv-item {
       background-image: url("/assets/img/back1.png");
       text-align: center;
       height: 400px;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       border: 1px solid $yellow-color !important;
       margin: 1rem;
-      backdrop-filter: blur(40px);
-      border: solid 2px transparent;
+
       background-clip: padding-box;
 
       h5 {
@@ -319,6 +337,16 @@ html {
         color: $yellow-color;
       }
     }
+  }
+}
+
+//CONTACT
+#contact {
+  h2 {
+    margin: 4rem auto;
+    text-align: center;
+    font-size: 3rem;
+    color: $pink-color;
   }
 }
 
