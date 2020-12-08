@@ -1,0 +1,16 @@
+$primary-color: purple;
+$secondary-color: #add9ff;
+$pink-color: #dd00a9;
+$yellow-color: #fdfc01;
+$dark-color: #180910;
+$light-color: rgb(238, 238, 238);
+
+.underline {
+  border-bottom: 2px solid $secondary-color;
+  width: 400px;
+  padding: 1rem 0;
+}
+
+.show {
+  display: block !important;
+}

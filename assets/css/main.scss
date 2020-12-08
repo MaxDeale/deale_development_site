@@ -15,6 +15,7 @@ $light-color: rgb(238, 238, 238);
 
 body {
   font-family: "Noto Sans JP";
+  background-color: $dark-color;
 }
 
 li {
@@ -23,13 +24,18 @@ li {
 
 a {
   text-decoration: none;
+  color: $dark-color;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 // HEADER
 
 #header {
   background-image: url("/assets/img/back1.png");
-  height: 90vh;
+  height: 1100px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -114,9 +120,24 @@ a {
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
   }
+
+  .sign:nth-child(1),
+  .sign:nth-child(2) {
+    animation: slideInFromLeft 2s ease-in;
+  }
+  .sign:nth-child(3),
+  .sign:nth-child(4) {
+    animation: slideInFromRight 2s ease-in;
+  }
+
   .sign {
-    background-color: $dark-color;
-    height: 230px;
+    // background-color: $dark-color;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+    height: 260px;
     border: 1px solid $secondary-color;
     display: flex;
     flex-direction: column;
@@ -137,5 +158,143 @@ a {
     img {
       margin: 0 30px;
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  #header-signs {
+    height: 150%;
+  }
+}
+
+//PORTFOLIO
+
+#portfolio {
+  h2 {
+    margin: 4rem auto;
+    text-align: center;
+    font-size: 3rem;
+    color: $pink-color;
+  }
+
+  .port-container {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    height: 700px;
+    .port-item {
+      transition: all 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      width: 350px;
+      border-radius: 2em;
+      display: flex;
+      backdrop-filter: blur(40px);
+      border: solid 2px transparent;
+      background-clip: padding-box;
+      box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+      flex-direction: column;
+      border: 1px solid $pink-color;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      h5 {
+        font-size: 2rem;
+        transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        z-index: 52;
+      }
+
+      h5:hover {
+        color: $yellow-color;
+      }
+    }
+
+    .port-head-1,
+    .port-head-3 {
+      animation: slideInFromTop 20s ease-in;
+      margin: 1rem;
+    }
+    .port-pic-1,
+    .port-pic-3 {
+      animation: slideInFromBottom 20s ease-in;
+      margin: 1rem;
+    }
+    .port-pic-2,
+    .port-pic-4 {
+      animation: slideInFromTop 20s ease-in !important;
+      margin: 1rem;
+    }
+    .port-head-2,
+    .port-head-4 {
+      animation: slideInFromBottom 20s ease-in;
+      margin: 1rem;
+    }
+  }
+  .port-pic {
+    // animation: slideInFromTop 20s ease-in;
+
+    width: 90%;
+    height: 30%;
+  }
+  .port-item:hover {
+    background-color: $pink-color;
+  }
+
+  .port-item-1 {
+    background-color: $secondary-color;
+  }
+}
+
+// SERVICES
+
+#services {
+  background-color: $secondary-color;
+  h2 {
+    margin: 4rem auto;
+    text-align: center;
+    font-size: 3rem;
+    width: 600px;
+    color: $pink-color;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
