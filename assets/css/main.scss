@@ -14,6 +14,12 @@ $light-color: rgb(238, 238, 238);
   box-sizing: border-box;
 }
 
+@mixin jContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: "Noto Sans JP";
   background-color: $dark-color;
@@ -60,6 +66,12 @@ html {
   }
 }
 
+// Header Queries
+@media (max-width: 1270px) {
+  #header {
+    height: 150%;
+  }
+}
 // NAVBAR
 
 #navbar {
@@ -304,7 +316,16 @@ html {
   .serv-container {
     margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+    .serv-item:nth-child(1),
+    .serv-item:nth-child(2) {
+      text-align: left;
+    }
+    .serv-item:nth-child(3),
+    .serv-item:nth-child(4) {
+      text-align: right;
+    }
 
     .serv-item:nth-child(odd) {
       border-bottom-right-radius: 20px;
@@ -318,24 +339,67 @@ html {
 
     .serv-item {
       background-image: url("/assets/img/back1.png");
-      text-align: center;
-      height: 400px;
+      height: 450px;
       background-attachment: fixed;
       background-repeat: no-repeat;
+      overflow: hidden;
       background-size: cover;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
       border: 1px solid $yellow-color !important;
       margin: 1rem;
-
       background-clip: padding-box;
 
       h5 {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        padding: 1rem;
         color: $yellow-color;
       }
+
+      p {
+        padding: 1rem;
+      }
+
+      .enquire-button {
+        color: $secondary-color;
+        margin: 1rem;
+        padding: 1rem 0;
+        background-color: $pink-color;
+        text-align: center;
+        width: 50%;
+        border: 1px solid $secondary-color;
+        transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      .right {
+        align-self: flex-end;
+      }
+      .enquire-button:hover {
+        color: $yellow-color;
+        background-color: $dark-color;
+        border-color: $yellow-color;
+        font-size: 1.2rem;
+      }
+
+      .serv-pics {
+        img {
+          width: 90px;
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// SERVICE Queries
+
+@media (max-width: 600px) {
+  .serv-item {
+    margin: 2rem 0;
+
+    width: 90%;
+    a {
+      width: 90% !important;
     }
   }
 }
@@ -347,6 +411,103 @@ html {
     text-align: center;
     font-size: 3rem;
     color: $pink-color;
+  }
+
+  .contact-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    form {
+      @include jContent();
+      flex-direction: column;
+      .form-group {
+        width: 100%;
+        @include jContent();
+        flex-direction: column;
+      }
+      label {
+        color: $yellow-color;
+        padding: 1rem;
+        font-size: 1.2rem;
+        align-self: flex-start;
+      }
+      input {
+        padding: 1rem 0;
+        width: 100%;
+        font-size: 2rem;
+        border: none;
+        margin: 1rem 0;
+      }
+      textarea {
+        font-size: 13px;
+      }
+      input::-webkit-input-placeholder {
+        font-size: 2rem;
+      }
+      textarea::-webkit-input-placeholder {
+        font-size: 2rem;
+      }
+      textarea:focus {
+        outline: none;
+        border: 2px solid $yellow-color;
+        box-shadow: 0 0 5px $yellow-color;
+      }
+      input:focus {
+        outline: none;
+        box-shadow: 0 0 5px $yellow-color;
+      }
+      .btn-submit {
+        width: 70%;
+        height: 100px;
+        background: $yellow-color;
+        font-size: 2rem;
+        margin: 1rem 0;
+        border: none;
+        transition: all 0.5s;
+      }
+      .btn-submit:hover {
+        width: 70%;
+        height: 100px;
+        color: $yellow-color;
+        cursor: pointer;
+        background: $pink-color;
+        font-size: 2rem;
+        margin: 1rem 0;
+        border: 1px solid $yellow-color;
+      }
+    }
+  }
+
+  .other-contacts {
+    @include jContent();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin-top: 5%;
+    text-align: center;
+    h6 {
+      font-size: 2rem;
+      color: $secondary-color;
+    }
+    div {
+      @include jContent();
+      padding: 2rem;
+      i {
+        color: $pink-color;
+        padding: 2rem;
+      }
+      p {
+        color: $secondary-color;
+        letter-spacing: 1px;
+      }
+    }
+    img {
+      width: 80px;
+      margin-left: 55px;
+    }
   }
 }
 

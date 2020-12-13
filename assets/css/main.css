@@ -61,6 +61,12 @@ html {
   margin-top: 5%;
 }
 
+@media (max-width: 1270px) {
+  #header {
+    height: 150%;
+  }
+}
+
 #navbar {
   width: 100%;
   background-color: #180910;
@@ -352,8 +358,18 @@ html {
   margin: 20px auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+#services .serv-container .serv-item:nth-child(1),
+#services .serv-container .serv-item:nth-child(2) {
+  text-align: left;
+}
+
+#services .serv-container .serv-item:nth-child(3),
+#services .serv-container .serv-item:nth-child(4) {
+  text-align: right;
 }
 
 #services .serv-container .serv-item:nth-child(odd) {
@@ -368,10 +384,10 @@ html {
 
 #services .serv-container .serv-item {
   background-image: url("/assets/img/back1.png");
-  text-align: center;
-  height: 400px;
+  height: 450px;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  overflow: hidden;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,9 +396,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -392,8 +405,52 @@ html {
 }
 
 #services .serv-container .serv-item h5 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 1rem;
   color: #fdfc01;
+}
+
+#services .serv-container .serv-item p {
+  padding: 1rem;
+}
+
+#services .serv-container .serv-item .enquire-button {
+  color: #add9ff;
+  margin: 1rem;
+  padding: 1rem 0;
+  background-color: #dd00a9;
+  text-align: center;
+  width: 50%;
+  border: 1px solid #add9ff;
+  -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#services .serv-container .serv-item .right {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#services .serv-container .serv-item .enquire-button:hover {
+  color: #fdfc01;
+  background-color: #180910;
+  border-color: #fdfc01;
+  font-size: 1.2rem;
+}
+
+#services .serv-container .serv-item .serv-pics img {
+  width: 90px;
+  margin: 1rem;
+}
+
+@media (max-width: 600px) {
+  .serv-item {
+    margin: 2rem 0;
+    width: 90%;
+  }
+  .serv-item a {
+    width: 90% !important;
+  }
 }
 
 #contact h2 {
@@ -401,6 +458,168 @@ html {
   text-align: center;
   font-size: 3rem;
   color: #dd00a9;
+}
+
+#contact .contact-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+#contact .contact-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .contact-container form .form-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .contact-container form label {
+  color: #fdfc01;
+  padding: 1rem;
+  font-size: 1.2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#contact .contact-container form input {
+  padding: 1rem 0;
+  width: 100%;
+  font-size: 2rem;
+  border: none;
+  margin: 1rem 0;
+}
+
+#contact .contact-container form textarea {
+  font-size: 13px;
+}
+
+#contact .contact-container form input::-webkit-input-placeholder {
+  font-size: 2rem;
+}
+
+#contact .contact-container form textarea::-webkit-input-placeholder {
+  font-size: 2rem;
+}
+
+#contact .contact-container form textarea:focus {
+  outline: none;
+  border: 2px solid #fdfc01;
+  -webkit-box-shadow: 0 0 5px #fdfc01;
+          box-shadow: 0 0 5px #fdfc01;
+}
+
+#contact .contact-container form input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px #fdfc01;
+          box-shadow: 0 0 5px #fdfc01;
+}
+
+#contact .contact-container form .btn-submit {
+  width: 70%;
+  height: 100px;
+  background: #fdfc01;
+  font-size: 2rem;
+  margin: 1rem 0;
+  border: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#contact .contact-container form .btn-submit:hover {
+  width: 70%;
+  height: 100px;
+  color: #fdfc01;
+  cursor: pointer;
+  background: #dd00a9;
+  font-size: 2rem;
+  margin: 1rem 0;
+  border: 1px solid #fdfc01;
+}
+
+#contact .other-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  margin-top: 5%;
+  text-align: center;
+}
+
+#contact .other-contacts h6 {
+  font-size: 2rem;
+  color: #add9ff;
+}
+
+#contact .other-contacts div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+#contact .other-contacts div i {
+  color: #dd00a9;
+  padding: 2rem;
+}
+
+#contact .other-contacts div p {
+  color: #add9ff;
+  letter-spacing: 1px;
+}
+
+#contact .other-contacts img {
+  width: 80px;
+  margin-left: 55px;
 }
 
 /* ANIMATIONS */
