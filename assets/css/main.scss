@@ -197,6 +197,7 @@ html {
 
 #portfolio {
   padding: 2rem 0;
+  padding-bottom: 8rem;
   h2 {
     margin: 4rem auto;
     text-align: center;
@@ -221,7 +222,7 @@ html {
       background-clip: padding-box;
       box-shadow: 10px 10px 10px rgba(36, 54, 68, 0.3);
       flex-direction: column;
-      border: 1px solid $pink-color;
+
       align-items: center;
       justify-content: center;
       overflow: hidden;
@@ -300,7 +301,6 @@ html {
 // SERVICES
 
 #services {
-  background-color: rgb(42, 42, 42);
   padding: 2rem 0;
   padding-bottom: 5rem;
   color: $secondary-color;
@@ -313,7 +313,6 @@ html {
     text-align: center;
     font-size: 3rem;
     width: 600px;
-    color: $pink-color;
   }
 
   .serv-container {
@@ -324,10 +323,12 @@ html {
     .serv-item:nth-child(1),
     .serv-item:nth-child(2) {
       text-align: left;
+      animation: slideInFromLeft 5s ease-in;
     }
     .serv-item:nth-child(3),
     .serv-item:nth-child(4) {
       text-align: right;
+      animation: slideInFromRight 5s ease-in;
     }
 
     .serv-item:nth-child(odd) {
@@ -341,11 +342,13 @@ html {
     }
 
     .serv-item {
-      background-image: url("/assets/img/back1.png");
+      background-image: url("/assets/img/back22.png");
       height: 450px;
       background-attachment: fixed;
       background-repeat: no-repeat;
       overflow: hidden;
+      backdrop-filter: blur(40px);
+      // border: solid 2px $secondary-color;
       background-size: cover;
       display: flex;
       flex-direction: column;

@@ -222,6 +222,7 @@ html {
 
 #portfolio {
   padding: 2rem 0;
+  padding-bottom: 8rem;
 }
 
 #portfolio h2 {
@@ -260,7 +261,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid #dd00a9;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -340,7 +340,6 @@ html {
 }
 
 #services {
-  background-color: #2a2a2a;
   padding: 2rem 0;
   padding-bottom: 5rem;
   color: #add9ff;
@@ -356,7 +355,6 @@ html {
   text-align: center;
   font-size: 3rem;
   width: 600px;
-  color: #dd00a9;
 }
 
 #services .serv-container {
@@ -370,11 +368,15 @@ html {
 #services .serv-container .serv-item:nth-child(1),
 #services .serv-container .serv-item:nth-child(2) {
   text-align: left;
+  -webkit-animation: slideInFromLeft 5s ease-in;
+          animation: slideInFromLeft 5s ease-in;
 }
 
 #services .serv-container .serv-item:nth-child(3),
 #services .serv-container .serv-item:nth-child(4) {
   text-align: right;
+  -webkit-animation: slideInFromRight 5s ease-in;
+          animation: slideInFromRight 5s ease-in;
 }
 
 #services .serv-container .serv-item:nth-child(odd) {
@@ -388,11 +390,13 @@ html {
 }
 
 #services .serv-container .serv-item {
-  background-image: url("/assets/img/back1.png");
+  background-image: url("/assets/img/back22.png");
   height: 450px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
