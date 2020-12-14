@@ -128,12 +128,12 @@ html {
   margin: 150px 10px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   .sign:nth-child(odd) {
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
   }
   .sign:nth-child(even) {
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
   }
 
   .sign:nth-child(1),
@@ -148,12 +148,12 @@ html {
   .sign {
     // background-color: $dark-color;
     z-index: 1;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(40px);
     border: solid 2px transparent;
     background-clip: padding-box;
-    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+    box-shadow: 2px 5px 10px rgba(46, 54, 68, 0.3);
     height: 260px;
-    border: 1px solid $secondary-color;
+    // border: 1px solid $secondary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,6 +196,7 @@ html {
 //PORTFOLIO
 
 #portfolio {
+  padding: 2rem 0;
   h2 {
     margin: 4rem auto;
     text-align: center;
@@ -299,7 +300,9 @@ html {
 // SERVICES
 
 #services {
-  background-color: $dark-color;
+  background-color: rgb(42, 42, 42);
+  padding: 2rem 0;
+  padding-bottom: 5rem;
   color: $secondary-color;
   .servhead {
     color: $secondary-color;
@@ -328,13 +331,13 @@ html {
     }
 
     .serv-item:nth-child(odd) {
-      border-bottom-right-radius: 20px;
-      border-top-left-radius: 20px;
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 50px;
     }
 
     .serv-item:nth-child(even) {
-      border-bottom-left-radius: 20px;
-      border-top-right-radius: 20px;
+      border-bottom-left-radius: 50px;
+      border-top-right-radius: 50px;
     }
 
     .serv-item {
@@ -347,18 +350,19 @@ html {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border: 1px solid $yellow-color !important;
+      // border: 1px solid $yellow-color !important;
       margin: 1rem;
       background-clip: padding-box;
 
       h5 {
-        font-size: 2rem;
+        font-size: 2.1rem;
         padding: 1rem;
         color: $yellow-color;
       }
 
       p {
         padding: 1rem;
+        font-size: 1.1rem;
       }
 
       .enquire-button {
@@ -368,7 +372,8 @@ html {
         background-color: $pink-color;
         text-align: center;
         width: 50%;
-        border: 1px solid $secondary-color;
+        border: 1px solid $dark-color;
+        border-radius: 4px;
         transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
       .right {

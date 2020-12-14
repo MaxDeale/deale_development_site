@@ -141,13 +141,13 @@ html {
 }
 
 #header-signs .sign:nth-child(odd) {
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
 #header-signs .sign:nth-child(even) {
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 40px;
 }
 
 #header-signs .sign:nth-child(1),
@@ -164,14 +164,13 @@ html {
 
 #header-signs .sign {
   z-index: 1;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
   border: solid 2px transparent;
   background-clip: padding-box;
-  -webkit-box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
-          box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  -webkit-box-shadow: 2px 5px 10px rgba(46, 54, 68, 0.3);
+          box-shadow: 2px 5px 10px rgba(46, 54, 68, 0.3);
   height: 260px;
-  border: 1px solid #add9ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,6 +218,10 @@ html {
   .sign {
     width: 100%;
   }
+}
+
+#portfolio {
+  padding: 2rem 0;
 }
 
 #portfolio h2 {
@@ -337,7 +340,9 @@ html {
 }
 
 #services {
-  background-color: #180910;
+  background-color: #2a2a2a;
+  padding: 2rem 0;
+  padding-bottom: 5rem;
   color: #add9ff;
 }
 
@@ -373,13 +378,13 @@ html {
 }
 
 #services .serv-container .serv-item:nth-child(odd) {
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
 }
 
 #services .serv-container .serv-item:nth-child(even) {
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 #services .serv-container .serv-item {
@@ -399,19 +404,19 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #fdfc01 !important;
   margin: 1rem;
   background-clip: padding-box;
 }
 
 #services .serv-container .serv-item h5 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   padding: 1rem;
   color: #fdfc01;
 }
 
 #services .serv-container .serv-item p {
   padding: 1rem;
+  font-size: 1.1rem;
 }
 
 #services .serv-container .serv-item .enquire-button {
@@ -421,7 +426,8 @@ html {
   background-color: #dd00a9;
   text-align: center;
   width: 50%;
-  border: 1px solid #add9ff;
+  border: 1px solid #180910;
+  border-radius: 4px;
   -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
