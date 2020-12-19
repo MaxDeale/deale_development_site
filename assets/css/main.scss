@@ -298,6 +298,27 @@ html {
   }
 }
 
+.enquire-button-tut {
+  color: $secondary-color;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  background-color: $pink-color;
+  text-align: center;
+  margin-top: 5%;
+  width: 30%;
+  display: block;
+  border: 1px solid $dark-color;
+  border-radius: 4px;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.enquire-button-tut:hover {
+  color: $yellow-color;
+  background-color: $dark-color;
+  border-color: $yellow-color;
+  font-size: 1.2rem;
+}
+
 // SERVICES
 
 #services {
