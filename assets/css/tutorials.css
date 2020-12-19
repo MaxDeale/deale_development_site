@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP";
+  background-color: #180910;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #180910;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#header {
+  height: 50%;
+}
+
+#tutorials {
+  height: 100vh;
+  color: #fdfc01;
+  background-color: #180910;
+}
+
+#tutorials h2 {
+  color: #add9ff;
+  border-bottom-color: #dd00a9;
+  width: 400px;
+  font-size: 3rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#tutorials .tut-container {
+  width: 70%;
+  display: -ms-grid;
+  display: grid;
+  margin: 5rem auto;
+}
+
+#tutorials .tut-container .tut-category-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #add9ff;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#tutorials .tut-container .tut-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+#tutorials .tut-container .tut-item h5 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+#tutorials .tut-container .tut-category {
+  font-size: 2.3rem;
+  margin: 3rem auto;
+  color: #add9ff;
+  text-align: center;
+}
+/*# sourceMappingURL=tutorials.css.map */

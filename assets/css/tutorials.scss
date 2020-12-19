@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+$primary-color: purple;
+$secondary-color: #add9ff;
+$pink-color: #dd00a9;
+$yellow-color: #fdfc01;
+$dark-color: #180910;
+$light-color: rgb(238, 238, 238);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin jContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Noto Sans JP";
+  background-color: $dark-color;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// TUTORIALS
+
+#header {
+  height: 50%;
+}
+
+#tutorials {
+  height: 100vh;
+  color: $yellow-color;
+  background-color: $dark-color;
+  h2 {
+    color: $secondary-color;
+    border-bottom-color: $pink-color;
+    width: 400px;
+    font-size: 3rem;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .tut-container {
+    width: 70%;
+    display: grid;
+    margin: 5rem auto;
+    .tut-category-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1px solid $secondary-color;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .tut-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+      h5 {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
+    .tut-category {
+      font-size: 2.3rem;
+      margin: 3rem auto;
+      color: $secondary-color;
+      text-align: center;
+    }
+  }
+}

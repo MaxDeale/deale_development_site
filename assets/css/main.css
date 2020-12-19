@@ -326,7 +326,7 @@ html {
 
 #portfolio .port-item:hover {
   background-color: #dd00a9;
-  border: 2px solid #fdfc01;
+  border: 0.5px solid #fdfc01;
 }
 
 @media (max-width: 600px) {
@@ -479,7 +479,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   margin: 0 auto;
   margin-bottom: 6rem;
 }
@@ -501,7 +500,7 @@ html {
 }
 
 #contact .contact-container form .form-group {
-  width: 100%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
