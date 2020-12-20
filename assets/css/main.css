@@ -331,11 +331,9 @@ html {
 
 @media (max-width: 600px) {
   .port-item {
-    margin: 20px 0 !important;
+    margin: 15px 0 !important;
     width: 100%;
-  }
-  .port-pic {
-    height: 300px !important;
+    height: 300px;
   }
 }
 
