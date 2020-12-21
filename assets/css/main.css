@@ -673,6 +673,12 @@ html {
   }
   #contact .form-group input {
     width: 100% !important;
+    padding: 2rem 0 !important;
+    font-size: 18px !important;
+  }
+  #contact .form-group label {
+    font-size: 18px !important;
+    text-align: center;
   }
   #contact .form-group {
     display: -webkit-box;
