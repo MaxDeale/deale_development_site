@@ -63,6 +63,7 @@ html {
   display: grid;
   -ms-grid-columns: (minmax(550px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  border: 1px solid #add9ff;
   border-radius: 10px;
   padding: 1rem;
   background-color: #08030e;
