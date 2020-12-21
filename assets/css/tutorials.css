@@ -31,7 +31,6 @@ html {
 }
 
 #tutorials {
-  height: 100vh;
   color: #fdfc01;
   background-color: #180910;
 }
@@ -119,5 +118,40 @@ html {
   text-transform: uppercase;
   padding: 3rem;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  #tutorials h2 {
+    font-size: 32px;
+  }
+  .enquire-button-tut {
+    width: 100%;
+  }
+  .tut-container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .tut-category-container {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .tut-item {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: -ms-grid;
+    display: grid;
+  }
+  .tut-item h5 {
+    text-align: center;
+    font-size: 12px !important;
+  }
+  .tut-category {
+    font-size: 24px !important;
+  }
+  .vid-cont {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=tutorials.css.map */
