@@ -67,7 +67,7 @@ html {
     margin: 5rem auto;
     .tut-category-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
       border: 1px solid $secondary-color;
       border-radius: 10px;
       padding: 1rem;
@@ -128,6 +128,7 @@ html {
   .tut-container {
     width: 100% !important;
     margin: 0 !important;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     padding: 0 !important;
   }
   .tut-category-container {
@@ -141,7 +142,6 @@ html {
     display: grid;
     h5 {
       text-align: center;
-
       font-size: 12px !important;
     }
   }
@@ -149,6 +149,6 @@ html {
     font-size: 24px !important;
   }
   .vid-cont {
-    width: 100%;
+    width: 300px;
   }
 }

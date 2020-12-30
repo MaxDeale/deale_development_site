@@ -60,8 +60,8 @@ html {
 #tutorials .tut-container .tut-category-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(550px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  -ms-grid-columns: (minmax(510px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
   border: 1px solid #add9ff;
   border-radius: 10px;
   padding: 1rem;
@@ -130,6 +130,8 @@ html {
   .tut-container {
     width: 100% !important;
     margin: 0 !important;
+    -ms-grid-columns: (minmax(310px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     padding: 0 !important;
   }
   .tut-category-container {
@@ -151,7 +153,7 @@ html {
     font-size: 24px !important;
   }
   .vid-cont {
-    width: 100%;
+    width: 300px;
   }
 }
 /*# sourceMappingURL=tutorials.css.map */
