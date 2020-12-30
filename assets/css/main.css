@@ -295,7 +295,7 @@ html {
 }
 
 #portfolio .port-container .port-item h5 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   -webkit-transition: all 0.5s cubic-bezier(0.455, 0.2203, 0.515, 0.955);
   transition: all 0.5s cubic-bezier(0.455, 0.2203, 0.515, 0.955);
   z-index: 52;
