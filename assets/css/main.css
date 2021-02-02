@@ -529,6 +529,12 @@ html {
   color: #dd00a9;
 }
 
+#contact #book-message {
+  width: 600px;
+  height: 600px;
+  font-size: 2rem;
+}
+
 #contact .contact-container {
   display: -ms-grid;
   display: grid;
@@ -749,6 +755,14 @@ html {
   #contact .other-contacts img {
     margin: 0 auto;
   }
+}
+
+#book-form h2 {
+  margin: 4rem auto;
+  text-align: center;
+  font-size: 3rem;
+  color: #dd00a9;
+  width: 700px;
 }
 
 /* ANIMATIONS */

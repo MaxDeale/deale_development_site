@@ -480,11 +480,16 @@ html {
     color: $pink-color;
   }
 
+  #book-message {
+    width: 600px;
+    height: 600px;
+    font-size: 2rem;
+  }
+
   .contact-container {
     display: grid;
     justify-content: center;
     align-items: center;
-
     margin: 0 auto;
     margin-bottom: 6rem;
     form {
@@ -618,6 +623,18 @@ html {
     .other-contacts img {
       margin: 0 auto;
     }
+  }
+}
+
+// TUT FORM
+
+#book-form {
+  h2 {
+    margin: 4rem auto;
+    text-align: center;
+    font-size: 3rem;
+    color: $pink-color;
+    width: 700px;
   }
 }
 
