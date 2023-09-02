@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deale Development | Development Services & Tutorials</title>
+  <title>Deale Development | Spicy Tech Media</title>
   <link rel="icon" href="./assets/img/favicon-16x16.png">
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="stylesheet" href="./assets/css/utilities.css" />
@@ -14,39 +14,41 @@
 <body>
   <section id="header">
     <div class="logo-and-slogan">
-
-      <img class="logo" src="./assets/img/DealeLogo.png" alt="" />
-      <h6 class="slogan">"We always figure it out... "</h6>
+      <img class="logo" src="./assets/img/DealeLogo.png" alt="nopic" />
+      <div class="slogan-container">
+        <h6 class="slogan">"We <span style="color: yellow">always</span> figure it out"</h6>
+      </div>
     </div>
 
     <nav id="navbar">
       <ul>
         <li><a href="index.html#header">HOME</a></li>
-        <li><a href="index.html#portfolio">PORTFOLIO</a></li>
-        <li><a href="index.html#services">SERVICES</a></li>
+        <li><a href="index.html#latest">LATEST EPISODES</a></li>
+        <li><a href="blog.html">BLOG</a></li>
         <li><a href="tutorials.html">TUTORIALS</a></li>
-        <li><a href="index.html#contact">CONTACT</a></li>
+        <li><a href="podcast.html">PODCAST</a></li>
       </ul>
     </nav>
 
     <div id="header-signs">
+
       <div class="sign">
         <div>
           <img class="ani1" src="./assets/img/pinkarrowright.png" alt="" />
-          <i class="fas fa-pencil-ruler fa-4x ani1"></i>
+          <i class="fas fa-solid fa-code fa-4x ani1"></i>
         </div>
         <div>
-          <h3 class="ani1">Web Design <span>.</span></h3>
+          <h3 class="ani1">Software Development<span>.</span></h3>
         </div>
 
       </div>
       <div class="sign">
         <div>
-          <i class="fas fa-cogs fa-4x ani1"></i>
+          <i class="fas fa-solid fa-user fa-4x ani1"></i>
           <img class="ani1" src="./assets/img/pinkarrowleft.png" alt="" />
         </div>
         <div>
-          <h3 class="ani1">Web Development <span>.</span></h3>
+          <h3 class="ani1">Personal Development<span>.</span></h3>
         </div>
       </div>
       <div class="sign">
@@ -55,7 +57,7 @@
           <i class="fas fa-pencil-ruler fa-4x"></i>
         </div>
         <div>
-          <h3>Online Marketing <span>.</span></h3>
+          <h3>Industry Information<span>.</span></h3>
         </div>
 
       </div>
@@ -65,19 +67,17 @@
           <img src="./assets/img/pinkarrowleft.png" alt="#" />
         </div>
         <div>
-          <h3>Tech Education <span>.</span></h3>
+          <h3>Tech Education<span>.</span></h3>
         </div>
       </div>
   </section>
 
   <!-- PORTFOLIO -->
 
-  <section id="portfolio">
-
-    <h2 class="underline porthead">Our Latest Works <span style="color: yellow">.</span> </h2>
+  <!-- <section id="portfolio">
+    <h2 class="underline porthead">Latest Episodes <span style="color: yellow">.</span> </h2>
 
     <div class="port-container">
-
       <div class="port-item">
         <a href="https://larabergeillustrations.netlify.app/"><img src="./assets/img/larasite.gif" alt="va pic"
             class="port-pic port-pic-4"></a>
@@ -92,7 +92,6 @@
         <a class="port-link " href="https://ambiousrecords.netlify.app/">
           <h5 class="port-head-4">Ambious Records</h5>
         </a>
-
       </div>
 
       <div class="port-item ">
@@ -119,14 +118,18 @@
             class="port-pic port-pic-3"></a>
       </div>
 
-
     </div>
-  </section>
+  </section> -->
 
   <!-- SERVICES SECTION -->
 
   <section id="services">
-    <h2 class="underline servhead">What Can We Offer <span style="color: yellow">?</span> </h2>
+    <div class="yt-home-link">
+      <a href="https://www.youtube.com/c/DealeDevelopment">
+        <img id="yt-pic-home" src="./assets/img/yt1.png" alt="yt-pic" />
+      </a>
+    </div>
+    <h2 class="underline servhead">Latest Episodes<span style="color: yellow">:</span> </h2>
 
     <div class="serv-container">
       <div class="serv-item">
@@ -168,56 +171,18 @@
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
-
-  <section id="contact">
-    <h2 class="underline">So Get In Touch <span style="color: yellow">!</span> </h2>
-    <div class="contact-container">
-      <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
-        <div class="form-group">
-          <label for="name"> Enter Your Name:</label>
-          <input type="text" class="text-input name-input" placeholder="Name" name="name" />
-        </div>
-
-        <div class="form-group">
-          <label for="subject">Enter The Subject:</label>
-          <input type="text" class="text-input subject-input" placeholder="Subject" name="subject" />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Enter Your Email Address:</label>
-          <input type="email" class="text-input email-input" placeholder="Email Address" name="email" />
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Enter Your Phone Number:</label>
-          <input type="text" class="text-input phone-input" placeholder="Phone Number" name="phone" />
-        </div>
-
-        <div class="form-group">
-          <label style="margin: 0 auto" for="message">Enter Your Message:</label>
-          <textarea id="ta" type="text" class="message-input name-input" placeholder="Enter Message" name="message"
-            rows="20" cols="60"></textarea>
-        </div>
-
-        <div style="margin: 1rem" data-netlify-recaptcha="true"></div>
-
-        <button type="submit" class="btn-submit">Submit</button>
-      </form>
-      <div class="other-contacts">
-        <h6>Alternatively...</h6>
-        <div>
-          <i class="fas fa-phone fa-2x"></i>
-          <p>0832912733</p>
-        </div>
-        <div>
-          <i class="fas fa-envelope fa-2x"></i>
-          <p>maxericdeale@gmail.com</p>
-        </div>
-        <img src="./assets/img/Original on Transparent.png" alt="" />
-      </div>
+  <div class="other-contacts">
+    <h6>Alternatively...</h6>
+    <div>
+      <i class="fas fa-phone fa-2x"></i>
+      <p>0832912733</p>
     </div>
-  </section>
+    <div>
+      <i class="fas fa-envelope fa-2x"></i>
+      <p>maxericdeale@gmail.com</p>
+    </div>
+    <img src="/assets/img/Original on Transparent.png" alt="" />
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <script src="./assets/js/main.js"></script>

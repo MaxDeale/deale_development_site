@@ -40,6 +40,21 @@ html {
 
 // HEADER
 
+.yt-home-link {
+  margin: 0px auto;
+  margin-top: 50px;
+  width: 80px;
+}
+
+#yt-pic-home {
+  width: 70px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
 #header {
   background-image: url('https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2068&q=80');
   height: 1100px;
@@ -47,21 +62,48 @@ html {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+
   .logo-and-slogan {
     display: flex;
     justify-content: center;
     flex-direction: column;
 
-    .slogan {
-      color: $secondary-color;
-      font-size: 23px;
-      margin: 10px auto;
-      letter-spacing: 1px;
+    .slogan-container {
+      margin: 25px auto;
+      padding: 5px 15px;
+      border-radius: 20px;
+      background-color: #180910;
+
+      .slogan {
+        color: $secondary-color;
+        font-size: 23px;
+        margin: 10px auto;
+        letter-spacing: 1px;
+      }
+
+
     }
+
+
     .logo {
-      width: 300px;
+      width: 200px;
+      border: 1px solid $secondary-color;
+      border-radius: 3px;
       margin: 10px auto;
       margin-top: 5%;
+      transition: transform 0.5s ease-in-out;
+      perspective: 800px;
+
+      &:hover {
+        transform: matrix3d(1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, 0,
+            0, 0, 0, 1.2);
+        transform: scale(1.001);
+        transform: skew(2);
+        transform: rotateY(360deg);
+        cursor: pointer;
+      }
     }
   }
 }
@@ -72,6 +114,7 @@ html {
     height: 150%;
   }
 }
+
 // NAVBAR
 
 #navbar {
@@ -83,18 +126,22 @@ html {
   height: 120px;
   justify-content: center;
   display: flex;
+
   ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
     li {
       margin: 0 30px;
+
       a {
         font-size: 1.4rem;
         transition: all 0.2s;
         color: $secondary-color;
       }
+
       a:hover {
         color: $pink-color;
         border-bottom: 3px solid $yellow-color;
@@ -109,10 +156,13 @@ html {
   #header {
     height: 200%;
   }
+
   #navbar {
     height: 400px;
+
     ul {
       flex-direction: column;
+
       li {
         margin: 10px 0;
       }
@@ -125,12 +175,14 @@ html {
 #header-signs {
   gap: 1rem;
   display: grid;
-  margin: 150px 10px;
+  margin: 80px 10px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
   .sign:nth-child(odd) {
     border-bottom-left-radius: 40px;
     border-top-right-radius: 40px;
   }
+
   .sign:nth-child(even) {
     border-bottom-right-radius: 40px;
     border-top-left-radius: 40px;
@@ -139,6 +191,7 @@ html {
   .sign:nth-child(1),
   .sign:nth-child(2) {
     animation: slideInFromLeft 2s ease-in;
+
     &:hover {
       transform: perspective(70em) rotateY(12deg);
       box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
@@ -148,9 +201,11 @@ html {
       border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
     }
   }
+
   .sign:nth-child(3),
   .sign:nth-child(4) {
     animation: slideInFromRight 2s ease-in;
+
     &:hover {
       transform: perspective(70em) rotateY(-12deg);
       box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
@@ -168,28 +223,33 @@ html {
     border: solid 2px transparent;
     background-clip: padding-box;
     box-shadow: 2px 5px 10px rgba(46, 54, 68, 0.3);
-    height: 260px;
+    height: 220px;
     // border: 1px solid $secondary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     align-items: center;
+
     h3 {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: $yellow-color;
-      letter-spacing: 2px;
+      letter-spacing: 2.1px;
       margin-top: 5%;
+
       span {
         color: $pink-color;
       }
     }
+
     i {
       color: $secondary-color;
     }
+
     img {
       margin: 0 30px;
     }
+
     // &:hover {
     //   transform: perspective(70em) rotateY(12deg);
     //   box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
@@ -207,6 +267,7 @@ html {
   #header {
     height: 150%;
   }
+
   .sign {
     width: 70%;
   }
@@ -223,6 +284,7 @@ html {
 #portfolio {
   padding: 2rem 0;
   padding-bottom: 8rem;
+
   h2 {
     margin: 4rem auto;
     text-align: center;
@@ -236,6 +298,7 @@ html {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     height: 700px;
+
     .port-item {
       transition: all 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       width: 350px;
@@ -251,6 +314,7 @@ html {
       align-items: center;
       justify-content: center;
       overflow: hidden;
+
       h5 {
         font-size: 1.7rem;
         transition: all 0.5s cubic-bezier(0.455, 0.2203, 0.515, 0.955);
@@ -269,22 +333,26 @@ html {
       animation: slideInFromTop 20s ease-in;
       margin: 1rem;
     }
+
     .port-pic-1,
     .port-pic-3 {
       animation: slideInFromBottom 20s ease-in;
       margin: 1rem;
     }
+
     .port-pic-2,
     .port-pic-4 {
       animation: slideInFromTop 20s ease-in !important;
       margin: 1rem;
     }
+
     .port-head-2,
     .port-head-4 {
       animation: slideInFromBottom 20s ease-in;
       margin: 1rem;
     }
   }
+
   .port-pic {
     // animation: slideInFromTop 20s ease-in;
     transition: all 1s;
@@ -296,6 +364,7 @@ html {
     transform: scale(2);
     margin: 0 auto !important;
   }
+
   .port-item:hover {
     background-color: $pink-color;
     border: 0.5px solid $yellow-color;
@@ -352,10 +421,12 @@ html {
   padding: 2rem 0;
   padding-bottom: 5rem;
   color: $secondary-color;
+
   .servhead {
     color: $secondary-color;
     border-bottom-color: $pink-color;
   }
+
   h2 {
     margin: 4rem auto;
     text-align: center;
@@ -373,6 +444,7 @@ html {
       text-align: left;
       animation: slideInFromLeft 5s ease-in;
     }
+
     .serv-item:nth-child(3),
     .serv-item:nth-child(4) {
       text-align: right;
@@ -427,9 +499,11 @@ html {
         border-radius: 4px;
         transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
+
       .right {
         align-self: flex-end;
       }
+
       .enquire-button:hover {
         color: $yellow-color;
         background-color: $dark-color;
@@ -453,18 +527,22 @@ html {
   #services {
     margin-top: 130%;
   }
+
   .servhead {
     font-size: 31px !important;
     width: 100% !important;
   }
+
   .porthead {
     font-size: 31px !important;
     width: 100% !important;
   }
+
   .serv-item {
     margin: 2rem 0 !important;
     padding: 18rem 0 !important;
     width: 90%;
+
     a {
       width: 90% !important;
     }
@@ -492,20 +570,24 @@ html {
     align-items: center;
     margin: 0 auto;
     margin-bottom: 6rem;
+
     form {
       @include jContent();
       flex-direction: column;
+
       .form-group {
         width: 70%;
         @include jContent();
         flex-direction: column;
       }
+
       label {
         color: $yellow-color;
         padding: 1rem;
         font-size: 1.2rem;
         align-self: flex-start;
       }
+
       input {
         padding: 1rem 0;
         width: 100%;
@@ -513,24 +595,30 @@ html {
         border: none;
         margin: 1rem 0;
       }
+
       textarea {
         font-size: 13px;
       }
+
       input::-webkit-input-placeholder {
         font-size: 2rem;
       }
+
       textarea::-webkit-input-placeholder {
         font-size: 2rem;
       }
+
       textarea:focus {
         outline: none;
         border: 2px solid $yellow-color;
         box-shadow: 0 0 5px $yellow-color;
       }
+
       input:focus {
         outline: none;
         box-shadow: 0 0 5px $yellow-color;
       }
+
       .btn-submit {
         width: 70%;
         height: 100px;
@@ -540,6 +628,7 @@ html {
         border: none;
         transition: all 0.5s;
       }
+
       .btn-submit:hover {
         width: 70%;
         height: 100px;
@@ -560,22 +649,27 @@ html {
     justify-content: center;
     margin-top: 5%;
     text-align: center;
+
     h6 {
       font-size: 2rem;
       color: $secondary-color;
     }
+
     div {
       @include jContent();
       padding: 2rem;
+
       i {
         color: $pink-color;
         padding: 2rem;
       }
+
       p {
         color: $secondary-color;
         letter-spacing: 1px;
       }
     }
+
     img {
       width: 80px;
       margin-left: 55px;
@@ -591,6 +685,7 @@ html {
       font-size: 31px !important;
       width: 100% !important;
     }
+
     .form-group input {
       width: 100% !important;
       padding: 2rem 0 !important;
@@ -620,6 +715,7 @@ html {
       @include jContent();
       flex-direction: column;
     }
+
     .other-contacts img {
       margin: 0 auto;
     }

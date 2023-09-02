@@ -25,6 +25,20 @@ html {
   scroll-behavior: smooth;
 }
 
+.yt-home-link {
+  margin: 0px auto;
+  margin-top: 50px;
+  width: 80px;
+}
+
+#yt-pic-home {
+  width: 70px;
+  transition: all 0.2s ease-in-out;
+}
+#yt-pic-home:hover {
+  transform: scale(1.02);
+}
+
 #header {
   background-image: url("https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2068&q=80");
   height: 1100px;
@@ -38,16 +52,33 @@ html {
   justify-content: center;
   flex-direction: column;
 }
-#header .logo-and-slogan .slogan {
+#header .logo-and-slogan .slogan-container {
+  margin: 25px auto;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: #180910;
+}
+#header .logo-and-slogan .slogan-container .slogan {
   color: #add9ff;
   font-size: 23px;
   margin: 10px auto;
   letter-spacing: 1px;
 }
 #header .logo-and-slogan .logo {
-  width: 300px;
+  width: 200px;
+  border: 1px solid #add9ff;
+  border-radius: 3px;
   margin: 10px auto;
   margin-top: 5%;
+  transition: transform 0.5s ease-in-out;
+  perspective: 800px;
+}
+#header .logo-and-slogan .logo:hover {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.2);
+  transform: scale(1.001);
+  transform: skew(2);
+  transform: rotateY(360deg);
+  cursor: pointer;
 }
 
 @media (max-width: 1270px) {
@@ -89,7 +120,6 @@ html {
   #header {
     height: 200%;
   }
-
   #navbar {
     height: 400px;
   }
@@ -103,7 +133,7 @@ html {
 #header-signs {
   gap: 1rem;
   display: grid;
-  margin: 150px 10px;
+  margin: 80px 10px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 #header-signs .sign:nth-child(odd) {
@@ -116,8 +146,7 @@ html {
 }
 #header-signs .sign:nth-child(1),
 #header-signs .sign:nth-child(2) {
-  -webkit-animation: slideInFromLeft 2s ease-in;
-          animation: slideInFromLeft 2s ease-in;
+  animation: slideInFromLeft 2s ease-in;
 }
 #header-signs .sign:nth-child(1):hover,
 #header-signs .sign:nth-child(2):hover {
@@ -125,12 +154,11 @@ html {
   box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px, rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
   border-radius: 10px;
   border: 1px solid;
-  border-color: #d5dce2 #d5dce2 #b8c2cc;
+  border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
 }
 #header-signs .sign:nth-child(3),
 #header-signs .sign:nth-child(4) {
-  -webkit-animation: slideInFromRight 2s ease-in;
-          animation: slideInFromRight 2s ease-in;
+  animation: slideInFromRight 2s ease-in;
 }
 #header-signs .sign:nth-child(3):hover,
 #header-signs .sign:nth-child(4):hover {
@@ -138,7 +166,7 @@ html {
   box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px, rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
   border-radius: 10px;
   border: 1px solid;
-  border-color: #d5dce2 #d5dce2 #b8c2cc;
+  border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
 }
 #header-signs .sign {
   z-index: 1;
@@ -147,17 +175,17 @@ html {
   border: solid 2px transparent;
   background-clip: padding-box;
   box-shadow: 2px 5px 10px rgba(46, 54, 68, 0.3);
-  height: 260px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   align-items: center;
 }
 #header-signs .sign h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #fdfc01;
-  letter-spacing: 2px;
+  letter-spacing: 2.1px;
   margin-top: 5%;
 }
 #header-signs .sign h3 span {
@@ -174,7 +202,6 @@ html {
   #header {
     height: 150%;
   }
-
   .sign {
     width: 70%;
   }
@@ -229,26 +256,22 @@ html {
 }
 #portfolio .port-container .port-head-1,
 #portfolio .port-container .port-head-3 {
-  -webkit-animation: slideInFromTop 20s ease-in;
-          animation: slideInFromTop 20s ease-in;
+  animation: slideInFromTop 20s ease-in;
   margin: 1rem;
 }
 #portfolio .port-container .port-pic-1,
 #portfolio .port-container .port-pic-3 {
-  -webkit-animation: slideInFromBottom 20s ease-in;
-          animation: slideInFromBottom 20s ease-in;
+  animation: slideInFromBottom 20s ease-in;
   margin: 1rem;
 }
 #portfolio .port-container .port-pic-2,
 #portfolio .port-container .port-pic-4 {
-  -webkit-animation: slideInFromTop 20s ease-in !important;
-          animation: slideInFromTop 20s ease-in !important;
+  animation: slideInFromTop 20s ease-in !important;
   margin: 1rem;
 }
 #portfolio .port-container .port-head-2,
 #portfolio .port-container .port-head-4 {
-  -webkit-animation: slideInFromBottom 20s ease-in;
-          animation: slideInFromBottom 20s ease-in;
+  animation: slideInFromBottom 20s ease-in;
   margin: 1rem;
 }
 #portfolio .port-pic {
@@ -271,7 +294,6 @@ html {
     width: 100%;
     height: 300px;
   }
-
   .port-container {
     width: 100% !important;
   }
@@ -320,14 +342,12 @@ html {
 #services .serv-container .serv-item:nth-child(1),
 #services .serv-container .serv-item:nth-child(2) {
   text-align: left;
-  -webkit-animation: slideInFromLeft 5s ease-in;
-          animation: slideInFromLeft 5s ease-in;
+  animation: slideInFromLeft 5s ease-in;
 }
 #services .serv-container .serv-item:nth-child(3),
 #services .serv-container .serv-item:nth-child(4) {
   text-align: right;
-  -webkit-animation: slideInFromRight 5s ease-in;
-          animation: slideInFromRight 5s ease-in;
+  animation: slideInFromRight 5s ease-in;
 }
 #services .serv-container .serv-item:nth-child(odd) {
   border-bottom-right-radius: 50px;
@@ -390,17 +410,14 @@ html {
   #services {
     margin-top: 130%;
   }
-
   .servhead {
     font-size: 31px !important;
     width: 100% !important;
   }
-
   .porthead {
     font-size: 31px !important;
     width: 100% !important;
   }
-
   .serv-item {
     margin: 2rem 0 !important;
     padding: 18rem 0 !important;
@@ -570,25 +587,9 @@ html {
 }
 
 /* ANIMATIONS */
-@-webkit-keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@-webkit-keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
@@ -602,25 +603,9 @@ html {
     transform: translateX(0);
   }
 }
-@-webkit-keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@-webkit-keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100%);
   }
   100% {
     transform: translateX(0);
