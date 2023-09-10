@@ -57,7 +57,7 @@ html {
 
 #header {
   background-image: url('https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2068&q=80');
-  height: 1100px;
+  height: 950px;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -102,8 +102,13 @@ html {
         transform: scale(1.001);
         transform: skew(2);
         transform: rotateY(360deg);
-        cursor: pointer;
+        cursor: default;
       }
+    }
+
+    .clicked {
+      border-radius: 32px;
+      transform: rotate(360deg);
     }
   }
 }
@@ -415,9 +420,9 @@ html {
   font-size: 1.2rem;
 }
 
-// SERVICES
+// latest-episodes
 
-#services {
+#latest-episodes {
   padding: 2rem 0;
   padding-bottom: 5rem;
   color: $secondary-color;
@@ -442,13 +447,17 @@ html {
     .serv-item:nth-child(1),
     .serv-item:nth-child(2) {
       text-align: left;
-      animation: slideInFromLeft 5s ease-in;
+      animation: slideInFromLeft 3s ease-in;
     }
 
     .serv-item:nth-child(3),
     .serv-item:nth-child(4) {
       text-align: right;
-      animation: slideInFromRight 5s ease-in;
+      animation: slideInFromRight 3s ease-in;
+
+      p {
+        text-align: right;
+      }
     }
 
     .serv-item:nth-child(odd) {
@@ -486,6 +495,17 @@ html {
       p {
         padding: 1rem;
         font-size: 1.1rem;
+        margin: 25px auto;
+        padding: 5px 15px;
+        border-radius: 20px;
+        background-color: #180910;
+        width: 80%;
+        transition: all 2s ease-in-out;
+
+        &:hover {
+          border: 3px solid #dd00a9;
+          cursor: default;
+        }
       }
 
       .enquire-button {
@@ -511,10 +531,23 @@ html {
         font-size: 1.2rem;
       }
 
-      .serv-pics {
+      .vid-preview {
+        border: 2px solid $secondary-color;
+        border-radius: 5px;
+        margin: 10px auto;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
         img {
           width: 90px;
           margin: 1rem;
+          transition: all 0.3s ease-in-out;
+
+
+
         }
       }
     }
@@ -524,7 +557,7 @@ html {
 // SERVICE Queries
 
 @media (max-width: 600px) {
-  #services {
+  #latest-episodes {
     margin-top: 130%;
   }
 
