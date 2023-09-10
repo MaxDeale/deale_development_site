@@ -38,20 +38,22 @@ html {
   scroll-behavior: smooth;
 }
 
-// TUTORIALS
+// videos
 
 #header {
   height: 50%;
 }
 
-#tutorials {
+#videos {
   color: $yellow-color;
   background-color: $dark-color;
+
   #yt-pic {
     width: 200px;
     margin: 3% auto;
     display: block;
   }
+
   h2 {
     color: $secondary-color;
     border-bottom-color: $pink-color;
@@ -65,6 +67,7 @@ html {
     width: 70%;
     display: grid;
     margin: 5rem auto;
+
     .tut-category-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
@@ -80,6 +83,7 @@ html {
       align-items: center;
       flex-direction: column;
       padding: 2rem;
+
       h5 {
         text-align: center;
         padding: 1rem;
@@ -96,6 +100,7 @@ html {
       background-attachment: fixed;
       border-radius: 10px;
     }
+
     .tut-category:nth-of-type(2),
     .tut-category:nth-of-type(4) {
       background-image: url("/assets/img/back22.png");
@@ -105,6 +110,7 @@ html {
       background-attachment: fixed;
       border-radius: 10px;
     }
+
     .tut-category {
       font-size: 2.3rem;
       margin: 3rem auto;
@@ -119,35 +125,42 @@ html {
 //TUT Queries
 
 @media (max-width: 600px) {
-  #tutorials h2 {
+  #videos h2 {
     font-size: 32px;
   }
+
   .enquire-button-tut {
     width: 100%;
   }
+
   .tut-container {
     width: 100% !important;
     margin: 0 !important;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     padding: 0 !important;
   }
+
   .tut-category-container {
     width: 100%;
     margin: 0 !important;
     padding: 0 !important;
   }
+
   .tut-item {
     padding: 0 !important;
     margin: 0 !important;
     display: grid;
+
     h5 {
       text-align: center;
       font-size: 12px !important;
     }
   }
+
   .tut-category {
     font-size: 24px !important;
   }
+
   .vid-cont {
     width: 300px;
   }

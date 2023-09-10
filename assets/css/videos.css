@@ -30,18 +30,18 @@ html {
   height: 50%;
 }
 
-#tutorials {
+#videos {
   color: #fdfc01;
   background-color: #180910;
 }
 
-#tutorials #yt-pic {
+#videos #yt-pic {
   width: 200px;
   margin: 3% auto;
   display: block;
 }
 
-#tutorials h2 {
+#videos h2 {
   color: #add9ff;
   border-bottom-color: #dd00a9;
   width: 400px;
@@ -50,14 +50,14 @@ html {
   text-align: center;
 }
 
-#tutorials .tut-container {
+#videos .tut-container {
   width: 70%;
   display: -ms-grid;
   display: grid;
   margin: 5rem auto;
 }
 
-#tutorials .tut-container .tut-category-container {
+#videos .tut-container .tut-category-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(510px, 1fr))[auto-fit];
@@ -68,7 +68,7 @@ html {
   background-color: #08030e;
 }
 
-#tutorials .tut-container .tut-item {
+#videos .tut-container .tut-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,14 +85,14 @@ html {
   padding: 2rem;
 }
 
-#tutorials .tut-container .tut-item h5 {
+#videos .tut-container .tut-item h5 {
   text-align: center;
   padding: 1rem;
   font-size: 1.5rem;
 }
 
-#tutorials .tut-container .tut-category:nth-of-type(1),
-#tutorials .tut-container .tut-category:nth-of-type(3) {
+#videos .tut-container .tut-category:nth-of-type(1),
+#videos .tut-container .tut-category:nth-of-type(3) {
   background-image: url("/assets/img/back1.png");
   background-position: center;
   background-size: cover;
@@ -101,8 +101,8 @@ html {
   border-radius: 10px;
 }
 
-#tutorials .tut-container .tut-category:nth-of-type(2),
-#tutorials .tut-container .tut-category:nth-of-type(4) {
+#videos .tut-container .tut-category:nth-of-type(2),
+#videos .tut-container .tut-category:nth-of-type(4) {
   background-image: url("/assets/img/back22.png");
   background-position: center;
   background-size: cover;
@@ -111,7 +111,7 @@ html {
   border-radius: 10px;
 }
 
-#tutorials .tut-container .tut-category {
+#videos .tut-container .tut-category {
   font-size: 2.3rem;
   margin: 3rem auto;
   color: #add9ff;
@@ -121,7 +121,7 @@ html {
 }
 
 @media (max-width: 600px) {
-  #tutorials h2 {
+  #videos h2 {
     font-size: 32px;
   }
   .enquire-button-tut {
@@ -156,4 +156,4 @@ html {
     width: 300px;
   }
 }
-/*# sourceMappingURL=tutorials.css.map */
+/*# sourceMappingURL=videos.css.map */
