@@ -824,9 +824,7 @@ html {
 
 #footer {
   height: 200px;
-  background-color: #add9ff;
-  border: 2px solid #180910;
-  border-radius: 2px;
+  background: linear-gradient(to right, #180910, #add9ff, #f0e68c);
 
   .footer-container {
     display: flex;
