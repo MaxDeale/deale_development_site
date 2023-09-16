@@ -36,9 +36,10 @@ html {
 }
 
 #videos #yt-pic {
-  width: 200px;
-  margin: 3% auto;
+  width: 140px;
+  margin: 0 auto;
   display: block;
+  margin-top: 4rem;
 }
 
 #videos h2 {
@@ -88,7 +89,17 @@ html {
 #videos .tut-container .tut-item h5 {
   text-align: center;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  background-color: #180910;
+  width: 80%;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  border-radius: 9px;
+}
+
+#videos .tut-container .tut-item h5:hover {
+  border: 3px solid #dd00a9;
+  cursor: default;
 }
 
 #videos .tut-container .tut-category:nth-of-type(1),
@@ -113,10 +124,10 @@ html {
 
 #videos .tut-container .tut-category {
   font-size: 2.3rem;
-  margin: 3rem auto;
+  margin: 1rem auto;
   color: #add9ff;
   text-transform: uppercase;
-  padding: 3rem;
+  padding: 1rem;
   text-align: center;
 }
 
