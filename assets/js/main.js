@@ -4,11 +4,9 @@ const tl = gsap.timeline({
 
 tl.from(".seq", { y: -30, opacity: 0, stagger: 0.2, duration: 0.5 }, "-=0.5");
 
-
 //LOGO
-const logo = document.querySelector('.logo');
+const logo = document.querySelector(".logo");
 
-logo.addEventListener('click', () => {
-  console.log('GRE')
-    logo.classList.toggle('clicked');
+logo.addEventListener("click", () => {
+  logo.classList.toggle("clicked");
 });
