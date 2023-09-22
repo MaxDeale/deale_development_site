@@ -4,8 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -34,14 +33,12 @@ html {
   color: #fdfc01;
   background-color: #180910;
 }
-
 #videos #yt-pic {
   width: 140px;
   margin: 0 auto;
   display: block;
   margin-top: 4rem;
 }
-
 #videos h2 {
   color: #add9ff;
   border-bottom-color: #dd00a9;
@@ -50,58 +47,39 @@ html {
   margin: 1rem auto;
   text-align: center;
 }
-
 #videos .tut-container {
   width: 70%;
-  display: -ms-grid;
   display: grid;
   margin: 5rem auto;
 }
-
 #videos .tut-container .tut-category-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(510px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
   border: 1px solid #add9ff;
   border-radius: 10px;
   padding: 1rem;
-  background-color: #08030e;
+  background-color: rgb(8, 3, 14);
 }
-
 #videos .tut-container .tut-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 2rem;
 }
-
 #videos .tut-container .tut-item h5 {
   text-align: center;
   padding: 1rem;
   font-size: 1rem;
   background-color: #180910;
   width: 80%;
-  -webkit-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
   border-radius: 9px;
 }
-
 #videos .tut-container .tut-item h5:hover {
   border: 3px solid #dd00a9;
   cursor: default;
 }
-
 #videos .tut-container .tut-category:nth-of-type(1),
 #videos .tut-container .tut-category:nth-of-type(3) {
   background-image: url("/assets/img/back1.png");
@@ -111,7 +89,6 @@ html {
   background-attachment: fixed;
   border-radius: 10px;
 }
-
 #videos .tut-container .tut-category:nth-of-type(2),
 #videos .tut-container .tut-category:nth-of-type(4) {
   background-image: url("/assets/img/back22.png");
@@ -121,7 +98,6 @@ html {
   background-attachment: fixed;
   border-radius: 10px;
 }
-
 #videos .tut-container .tut-category {
   font-size: 2.3rem;
   margin: 1rem auto;
@@ -141,8 +117,7 @@ html {
   .tut-container {
     width: 100% !important;
     margin: 0 !important;
-    -ms-grid-columns: (minmax(310px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     padding: 0 !important;
   }
   .tut-category-container {
@@ -153,7 +128,6 @@ html {
   .tut-item {
     padding: 0 !important;
     margin: 0 !important;
-    display: -ms-grid;
     display: grid;
   }
   .tut-item h5 {
@@ -166,5 +140,4 @@ html {
   .vid-cont {
     width: 300px;
   }
-}
-/*# sourceMappingURL=videos.css.map */
+}/*# sourceMappingURL=videos.css.map */
