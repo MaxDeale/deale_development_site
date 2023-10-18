@@ -788,7 +788,7 @@ html {
     height:600px;
     width:50%;
     border-radius: 15px;
-    margin: 20px auto;
+    margin: 5rem auto;
     transition: all 2s ease-in-out;
     &:hover {
       transform: perspective(70em) rotateY(-12deg);
@@ -803,9 +803,10 @@ html {
       margin: 20px auto;
     }
     img{
-      width: 300px;
+      width: 400px;
       border: 1px solid white;
       transition: all 2s ease-in-out;
+      border-radius: 20px;
       &:hover {
         transform: perspective(70em) rotateY(16deg);
         box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,

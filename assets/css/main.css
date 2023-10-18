@@ -475,7 +475,7 @@ html {
   height: 600px;
   width: 50%;
   border-radius: 15px;
-  margin: 20px auto;
+  margin: 5rem auto;
   transition: all 2s ease-in-out;
 }
 #podcast .podcast-container:hover {
@@ -490,9 +490,10 @@ html {
   margin: 20px auto;
 }
 #podcast .podcast-container img {
-  width: 300px;
+  width: 400px;
   border: 1px solid white;
   transition: all 2s ease-in-out;
+  border-radius: 20px;
 }
 #podcast .podcast-container img:hover {
   transform: perspective(70em) rotateY(16deg);
