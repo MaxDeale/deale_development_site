@@ -397,11 +397,9 @@ html {
   border-radius: 20px;
   background-color: #180910;
   width: 80%;
-  transition: all 2s ease-in-out;
-}
-#latest-episodes .serv-container .serv-item p:hover {
   border: 3px solid #dd00a9;
   cursor: default;
+  transition: all 8s ease-in-out;
 }
 #latest-episodes .serv-container .serv-item .enquire-button {
   color: #add9ff;

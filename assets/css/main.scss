@@ -506,12 +506,9 @@ html {
         border-radius: 20px;
         background-color: #180910;
         width: 80%;
-        transition: all 2s ease-in-out;
-
-        &:hover {
-          border: 3px solid #dd00a9;
-          cursor: default;
-        }
+        border: 3px solid #dd00a9;
+        cursor: default;
+        transition: all 8s ease-in-out;
       }
 
       .enquire-button {
@@ -772,8 +769,8 @@ html {
 
 // PODCAST
 
-#podcast{
-  .podcast-container{
+#podcast {
+  .podcast-container {
     z-index: 1;
     backdrop-filter: blur(40px);
     border: solid 2px transparent;
@@ -785,11 +782,12 @@ html {
     justify-content: center;
     transition: all 0.5s ease-in-out;
     align-items: center;
-    height:600px;
-    width:50%;
+    height: 600px;
+    width: 50%;
     border-radius: 15px;
     margin: 5rem auto;
     transition: all 2s ease-in-out;
+
     &:hover {
       transform: perspective(70em) rotateY(-12deg);
       box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
@@ -798,15 +796,18 @@ html {
       border: 1px solid;
       border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
     }
-    h1{
+
+    h1 {
       color: $pink-color;
       margin: 20px auto;
     }
-    img{
+
+    img {
       width: 400px;
       border: 1px solid white;
       transition: all 2s ease-in-out;
       border-radius: 20px;
+
       &:hover {
         transform: perspective(70em) rotateY(16deg);
         box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
