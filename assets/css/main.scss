@@ -508,7 +508,7 @@ html {
         width: 80%;
         border: 3px solid #dd00a9;
         cursor: default;
-        transition: all 8s ease-in-out;
+        animation: pulse 18s infinite;
       }
 
       .enquire-button {
@@ -869,6 +869,27 @@ html {
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #180910;
+    width: 80%;
+    border: 3px solid #dd00a9;
+  }
+
+  50% {
+    background-color: #dd00a9;
+    width: 85%;
+    /* Modify width as needed */
+    border: 3px solid #180910;
+  }
+
+  100% {
+    background-color: #180910;
+    width: 80%;
+    border: 3px solid #dd00a9;
   }
 }
 
